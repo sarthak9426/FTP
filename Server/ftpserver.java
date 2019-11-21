@@ -24,7 +24,7 @@ public class ftpserver {
  
     	}
 
-	/**
+		/**
      	* A handler thread class.  Handlers are spawned from the listening
      	* loop and are responsible for dealing with a single client's requests.
      	*/
@@ -83,7 +83,6 @@ public class ftpserver {
 					        System.out.println("Sending " + fname+ ".....");
 					        out.write(bytearr,0,bytearr.length);
 					        System.out.println("Success");
-					        // Close the fileinput stream
 					        finputs.close(); 
 							out.flush();
 						}
@@ -106,7 +105,6 @@ public class ftpserver {
 					    		fostream.write(bytearr,0,count);
 					    	}
 					    	System.out.println("File " + fname + " received");
-					    	// Close the fileoutput stream
 					    	fostream.close();
 					    }
 					    else
@@ -136,7 +134,6 @@ public class ftpserver {
 			System.out.println("Disconnecting with client " + no);
 		}
 		finally{
-			//Close connections
 			try{
 				in.close();
 				out.close();

@@ -43,7 +43,6 @@ public class ftpclient {
 								String temp = (String) in.readObject();
 								System.out.println(temp);
 								if (temp.equalsIgnoreCase("Logged in successfully")) {
-									//update flag to get out of the loop
 									lflag = Boolean.TRUE;
 								}
 							}
@@ -127,7 +126,6 @@ public class ftpclient {
 		} catch (IOException ioException) {
 			ioException.printStackTrace();
 		} finally {
-			// Close connections
 			try {
 				in.close();
 				out.close();
